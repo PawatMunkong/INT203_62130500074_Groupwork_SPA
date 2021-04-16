@@ -1,0 +1,20 @@
+{
+    "emotion": [
+      {
+        "id": 1,
+        "detail": "Today is really a good day",
+        "type": "Good"
+      },
+      {
+        "id": 2,
+        "detail": "Just nothing",
+        "type": "Normal"
+      },
+      {
+        "id": 3,
+        "detail": "Terrible, another bug fix",
+        "type": "bad"
+      
+      }
+    ]
+  }
