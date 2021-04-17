@@ -1,19 +1,19 @@
 {
-    "emotion": [
+    "emotions": [
       {
         "id": 1,
-        "detail": "Today is really a good day",
-        "type": "Good"
+        "message": "Today is really a good day"
+        
       },
       {
         "id": 2,
-        "detail": "Just nothing",
-        "type": "Normal"
+        "message": "Just nothing"
+        
       },
       {
         "id": 3,
-        "detail": "Terrible, another bug fix",
-        "type": "bad"
+        "message": "Terrible, another bug fix"
+      
       
       }
     ]
