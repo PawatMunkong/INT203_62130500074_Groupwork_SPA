@@ -14,10 +14,11 @@
           Can be replaced at a time!
         </p>
       </div>
+        <!-- emotion GOOD -->
       <div class="pt-9 px-96 ml-24 mr-60 flex flex-col mb-3 text-xl">
         <textarea v-model="updatem.detail" rows="2" id="detail"></textarea>
 
-        <router-link to="/list">
+        <router-link to="/LullaList">
           <button
             class="mt-4 px-4 py-2 bg-green-500 text-white text-sm uppercase font-medium rounded hover:bg-green-400 focus:outline-none focus:bg-green-400"
             @click="updateemotion"
@@ -26,6 +27,7 @@
           </button>
         </router-link>
       </div>
+      <!-- emotion GOOD -->
       <div class="pt-6 px-96 ml-24 mr-60 flex flex-col mb-3 text-xl">
         <textarea v-model="detail2" rows="2" id="detail2"></textarea>
 
@@ -36,6 +38,7 @@
           GOOD
         </button>
       </div>
+       <!-- emotion GOOD -->
       <div class="pt-6 px-96 ml-24 mr-60 flex flex-col mb-3 text-xl">
         <textarea v-model="detail2" rows="2" id="detail2"></textarea>
 
@@ -52,6 +55,11 @@
 
 <script>
 // @ is an alias to /src
+// import axios from "axios";
+
+//ผมใช้ axios ในการ -get-post-put-and-delete ครับ yarn add axios ref.จากเว็บที่เอามาใช้
+//https://www.npmjs.com/package/axios
+//https://www.javaguides.net/2020/08/reactjs-axios-get-post-put-and-delete-example-tutorial.html
 
 const axios = require("axios");
 

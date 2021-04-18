@@ -20,7 +20,7 @@ const routes = [
     component:Lullabylist
   },
   {
-    path: '/list',
+    path: '/LullaList',
     name: 'LullaList',
     component: () => import('../views/Lullabylist.vue')
   },
