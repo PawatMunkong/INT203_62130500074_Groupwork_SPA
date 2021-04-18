@@ -1,6 +1,8 @@
 <template>
   <div class="text-black text-3xl justify-center stroke-current">
-    <emotion :emotionss="emotions" @delete="deleteemotion($event)" ></emotion>
+    <!--  -->
+    <emotion :emotionss="emotions" :emotionss2="emotions2" @delete="deleteemotion($event)"  @delete2="deleteemotion2($event)" ></emotion>
+
     <!-- <Emotion/> -->
     <!-- <NavBar/> -->
   </div>
@@ -17,6 +19,7 @@ const axios = require("axios");
 export default {
   created() {
     this.dataget();
+    this.dataget2();
   },
 
   components: {
@@ -26,6 +29,10 @@ export default {
   data() {
     return {
       emotions: [],
+//
+      emotions2: [],
+      url2: "http://localhost:3000/emotions2",
+//
       url: "http://localhost:3000/emotions",
     };
   },
@@ -34,7 +41,10 @@ export default {
     dataget() {
       axios
         .get(this.url)
+      
         .then((response) => {
+          //
+          //
           this.emotions = response.data;
           console.log(this.emotions);
           return response.data;
@@ -43,9 +53,27 @@ export default {
           console.log(error);
         });
     },
+    ///
+dataget2() {
+      axios
+        .get(this.url2)
+      
+        .then((response) => {
+          //
+          //
+          this.emotions2 = response.data;
+          console.log(this.emotions2);
+          return response.data;
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
+    ///
     deleteemotion(id) {
       axios
         .delete(this.url + "/" + id)
+       
         .then((response) => {
           return response.data;
         })
@@ -53,11 +81,35 @@ export default {
           console.log(error);
         })
         .then(() => {
+          //
+         
+          //
           this.emotions = this.emotions.filter(
-            (emotionss) => emotionss.id !== id
+            (emotionss) => emotionss.id !== id 
           );
         });
     },
+    //
+ deleteemotion2(id) {
+      axios
+        .delete(this.url2 + "/" + id)
+       
+        .then((response) => {
+          return response.data;
+        })
+        .catch((error) => {
+          console.log(error);
+        })
+        .then(() => {
+          //
+         
+          //
+          this.emotions2 = this.emotions2.filter(
+            (emotionss2) => emotionss2.id !== id 
+          );
+        });
+    },
+    //
   },
 };
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div class="ChangeEmotion">
+  <div class="ChangeEmotionbad">
     <div class="text-black text-3xl justify-center stroke-current">
       <div class="pl-80 py-12 ml-60">
         <p class="font-extrabold text-5xl">ChangeEmotion</p>
@@ -9,21 +9,21 @@
           Oops!! Are you sure it will change your feelings?
         </p>
       </div>
-  
-      <!-- emotion GOOD -->
+     
+      <!--  -->
       <div class="pt-9 px-96 ml-24 mr-60 flex flex-col mb-3 text-xl">
-        <textarea v-model="updatem.detail" rows="2" id="detail"></textarea>
+        <textarea v-model="updatem2.detail2" rows="2" id="detail2"></textarea>
 
         <router-link to="/LullaList">
           <button
-            class="mt-4 px-4 py-2 bg-green-500 text-white text-sm uppercase font-medium rounded hover:bg-green-400 focus:outline-none focus:bg-green-400"
-            @click="updateemotion"
+            class="mt-4 px-4 py-2 bg-yellow-600 text-white text-sm uppercase font-medium rounded hover:bg-yellow-500 focus:outline-none focus:bg-yellow-500"
+            @click="updateemotion2"
           >
             GOOD
           </button>
         </router-link>
       </div>
-  
+      <!-- emotion GOOD -->
     </div>
   </div>
 </template>
@@ -40,70 +40,66 @@ const axios = require("axios");
 
 export default {
   created() {
-    this.dataget();
-    
+    this.dataget2();
   },
 
   props: {
-    ce: {
+    ce2: {
       require: true,
       type: String,
     },
-  
   },
 
   data() {
     return {
       //
-     
+
       //
-      emotionss: [],
-      updatem: {
-        detail: "",
+      emotionss2: [],
+      updatem2: {
+        detail2: "",
         id: "",
       },
       //
-      
-   
+
       //
-      url: "http://localhost:3000/emotions/",
+      url2: "http://localhost:3000/emotions2/",
     };
   },
 
   methods: {
-    dataget() {
+    dataget2() {
       axios
-        .get(this.url + this.$route.params.ce)
+        .get(this.url2 + this.$route.params.ce2)
         .then((response) => {
-          this.emotionss = response.data;
+          this.emotionss2 = response.data;
           console.log(response.data);
           return response.data;
         })
         .then(() => {
-          this.updatem.detail = this.emotionss.detail;
-          console.log(this.updatem.detail);
+          this.updatem2.detail2 = this.emotionss2.detail2;
+          console.log(this.updatem2.detail2);
         })
         .catch((error) => {
           console.log(error);
         });
     },
-    updateemotion() {
-      let changes = {
-        detail: this.updatem.detail,
+    updateemotion2() {
+      let changes2 = {
+        detail2: this.updatem2.detail2,
       };
       axios
-        .put(this.url + this.$route.params.ce, changes)
+        .put(this.url2 + this.$route.params.ce2, changes2)
         .then((response) => {
           return response.data;
         })
         .then(() => {
-          this.emotionss = changes;
+          this.emotionss2 = changes2;
         })
         .catch((error) => {
           console.log(error);
         });
     },
-
   },
 };
 </script>

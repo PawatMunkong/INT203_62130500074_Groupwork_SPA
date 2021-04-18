@@ -11,7 +11,7 @@
       </div>
       <div class="px-32 ml-96">
         <p class="font-extrabold text-2xl">
-          Choose to write green, yellow, red, write only one !
+          Choose to write green, yellow,  write only one !
         </p>
       </div>
       <!-- emotion GOOD -->
@@ -31,19 +31,10 @@
           class="mt-4 px-4 py-2 bg-yellow-600 text-white text-sm uppercase font-medium rounded hover:bg-yellow-500 focus:outline-none focus:bg-yellow-500"
           @click.prevent="submitemotion2"
         >
-          GOOD
+          BAD
         </button>
       </div>
-        <!-- emotion GOOD -->
-        <div class="pt-6 px-96 ml-24 mr-60 flex flex-col mb-3 text-xl">
-        <textarea v-model="detail2" rows="2" id="detail2"></textarea>
-        <button
-          class="mt-4 px-4 py-2 bg-red-700 text-white text-sm uppercase font-medium rounded hover:bg-red-600 focus:outline-none focus:bg-red-600"
-          @click.prevent="submitemotion3"
-        >
-          GOOD
-        </button>
-      </div>
+      
     </div>
   </div>
 </template>
@@ -61,16 +52,20 @@ export default {
   
   data(){
     return{
-     
+      //
+     detail2: '',
+      url2:'http://localhost:3000/emotions2',
+     //
       detail: '',
-      url:'http://localhost:3000/emotions'
+      url:'http://localhost:3000/emotions',
+      
     }
   },
 
   methods:{
     submitemotion(){
       axios.post(this.url,{
-
+ 
         detail: this.detail
       }).then((response) => {
         return response.data
@@ -83,7 +78,26 @@ export default {
       }).catch((error) => {
         console.log(error)
       })
+    },
+//
+ submitemotion2(){
+      axios.post(this.url2,{
+ 
+        detail2: this.detail2
+      }).then((response) => {
+        return response.data
+      }).then(() => {
+       
+        this.detai2= ''
+        setTimeout(() => {
+          this.$router.push('LullaList')
+        }, 250);
+      }).catch((error) => {
+        console.log(error)
+      })
     }
   }
+  //
+
 };
 </script>

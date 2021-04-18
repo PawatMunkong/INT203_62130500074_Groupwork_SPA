@@ -28,8 +28,12 @@ const routes = [
     path: '/change/:ce',
     name: 'Change',
     component: () => import('../views/ChangeEmotion.vue')
+  },
+  {
+    path: '/change2/:ce2',
+    name: 'Change2',
+    component: () => import('../views/ChangeEmotionbad.vue')
   }
-
 ]
 
 const router = createRouter({
