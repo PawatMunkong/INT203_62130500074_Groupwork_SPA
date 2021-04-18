@@ -33,10 +33,10 @@ export default {
   data() {
     return {
       emotions: [],
-      //
+      //emotions2
       emotions2: [],
       url2: "http://localhost:3000/emotions2",
-      //
+      //emotions
       url: "http://localhost:3000/emotions",
     };
   },

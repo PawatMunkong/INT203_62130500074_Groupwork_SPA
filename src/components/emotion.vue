@@ -9,20 +9,20 @@
     <!-- emotionss GOOD -->
     <div class="mx-6" v-for="em in emotionss" :key="em.id">
       <div class="overflow-hidden shadow-md mb-10">
-        <div class="p-6 border-gray-300  bg-green-200">
+        <div class="p-6 border-gray-300 bg-green-200">
           {{ em.detail }}
         </div>
         <!-- Test box -->
         <div class="p-6 bg-green-200">
           <router-link :to="{ name: 'Change', params: { ce: em.id } }">
             <button
-              class="mt-16 mx-10 px-4 py-2 bg-blue-500 text-white text-sm uppercase font-medium rounded hover:bg-blue-600 focus:outline-none "
+              class="mt-16 mx-10 px-4 py-2 bg-blue-500 text-white text-sm uppercase font-medium rounded hover:bg-blue-600 focus:outline-none"
             >
               EDIT
             </button></router-link
           >
           <button
-            class="mt-16 mx-10 px-4 py-2 bg-red-500 text-white text-sm uppercase font-sans rounded hover:bg-red-600 focus:outline-none "
+            class="mt-16 mx-10 px-4 py-2 bg-red-500 text-white text-sm uppercase font-sans rounded hover:bg-red-600 focus:outline-none"
             @click="$emit('delete', em.id)"
           >
             DELETE
@@ -30,7 +30,7 @@
         </div>
       </div>
     </div>
-     <!-- emotionss BAD -->
+    <!-- emotionss BAD -->
     <div class="mx-6" v-for="em2 in emotionss2" :key="em2.id">
       <div class="overflow-hidden shadow-md mb-10">
         <div class="p-6 border-gray-300 bg-yellow-200">
@@ -40,7 +40,7 @@
         <div class="p-6 bg-yellow-200">
           <router-link :to="{ name: 'Change2', params: { ce2: em2.id } }">
             <button
-              class="mt-16 mx-10 px-4 py-2 bg-blue-500 text-white text-sm uppercase font-medium rounded hover:bg-blue-600 focus:outline-none "
+              class="mt-16 mx-10 px-4 py-2 bg-blue-500 text-white text-sm uppercase font-medium rounded hover:bg-blue-600 focus:outline-none"
             >
               EDIT
             </button></router-link
