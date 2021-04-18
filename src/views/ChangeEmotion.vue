@@ -1,4 +1,5 @@
 <template>
+<!-- ChangeEmotion GOOD Edit-->
   <div class="ChangeEmotion">
     <div class="text-black text-3xl justify-center stroke-current">
       <div class="pl-80 py-12 ml-60">
@@ -54,22 +55,17 @@ export default {
 
   data() {
     return {
-      //
-     
-      //
+
       emotionss: [],
       updatem: {
         detail: "",
         id: "",
       },
-      //
-      
-   
-      //
+
       url: "http://localhost:3000/emotions/",
     };
   },
-
+  //Edit
   methods: {
     dataget() {
       axios

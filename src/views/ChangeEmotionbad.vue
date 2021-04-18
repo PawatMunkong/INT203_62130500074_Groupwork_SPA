@@ -1,4 +1,5 @@
 <template>
+  <!-- ChangeEmotion BAD Edit-->
   <div class="ChangeEmotionbad">
     <div class="text-black text-3xl justify-center stroke-current">
       <div class="pl-80 py-12 ml-60">
@@ -9,7 +10,7 @@
           Oops!! Are you sure it will change your feelings?
         </p>
       </div>
-     
+
       <!--  -->
       <div class="pt-9 px-96 ml-24 mr-60 flex flex-col mb-3 text-xl">
         <textarea v-model="updatem2.detail2" rows="2" id="detail2"></textarea>
@@ -23,7 +24,6 @@
           </button>
         </router-link>
       </div>
-      <!-- emotion GOOD -->
     </div>
   </div>
 </template>
@@ -37,7 +37,7 @@
 //https://www.javaguides.net/2020/08/reactjs-axios-get-post-put-and-delete-example-tutorial.html
 
 const axios = require("axios");
-
+//  <!-- ChangeEmotion BAD -->
 export default {
   created() {
     this.dataget2();
@@ -52,21 +52,17 @@ export default {
 
   data() {
     return {
-      //
 
-      //
       emotionss2: [],
       updatem2: {
         detail2: "",
         id: "",
       },
-      //
 
-      //
       url2: "http://localhost:3000/emotions2/",
     };
   },
-
+  //Edit
   methods: {
     dataget2() {
       axios
