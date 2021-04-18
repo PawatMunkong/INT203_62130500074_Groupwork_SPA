@@ -79,7 +79,7 @@ export default {
         this.detail= ''
         setTimeout(() => {
           this.$router.push('List')
-        }, 1000);
+        }, 250);
       }).catch((error) => {
         console.log(error)
       })

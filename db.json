@@ -1,28 +1,16 @@
 {
   "emotions": [
     {
-      "id": 1,
-      "detail": "Today is really a good day"
+      "detail": "Today is really a good day.",
+      "id": 1
     },
     {
-      "id": 2,
-      "detail": "Just nothing"
+      "detail": "Yay, the work will be finished.",
+      "id": 2
     },
     {
-      "id": 3,
-      "detail": "Terrible, another bug fix"
-    },
-    {
-      "detail": "rrwat",
-      "id": 4
-    },
-    {
-      "detail": "มีความสุ๘",
-      "id": 5
-    },
-    {
-      "detail": "Test",
-      "id": 6
+      "detail": "ดีจัง",
+      "id": 3
     }
   ]
 }
