@@ -24,7 +24,7 @@
           GOOD
         </button>
       </div>
-        <!-- emotion GOOD -->
+        <!-- emotion BAD -->
         <div class="pt-6 px-96 ml-24 mr-60 flex flex-col mb-3 text-xl">
         <textarea v-model="detail2" rows="2" id="detail2"></textarea>
         <button
@@ -61,7 +61,7 @@ export default {
       
     }
   },
-
+//  submitemotion GOOD
   methods:{
     submitemotion(){
       axios.post(this.url,{
@@ -79,7 +79,7 @@ export default {
         console.log(error)
       })
     },
-//
+//BAD
  submitemotion2(){
       axios.post(this.url2,{
  
@@ -97,7 +97,6 @@ export default {
       })
     }
   }
-  //
 
 };
 </script>

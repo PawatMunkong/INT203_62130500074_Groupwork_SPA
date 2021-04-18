@@ -6,6 +6,7 @@
   </div>
 
   <div class="pl-24 flex flex-row flex-wrap box-border">
+    <!-- emotionss GOOD -->
     <div class="mx-6" v-for="em in emotionss" :key="em.id">
       <div class="overflow-hidden shadow-md mb-10">
         <div class="p-6 border-gray-300  bg-green-200">
@@ -20,7 +21,6 @@
               EDIT
             </button></router-link
           >
-
           <button
             class="mt-16 mx-10 px-4 py-2 bg-red-500 text-white text-sm uppercase font-sans rounded hover:bg-red-600 focus:outline-none "
             @click="$emit('delete', em.id)"
@@ -30,7 +30,7 @@
         </div>
       </div>
     </div>
-    <!-- Test d2 -->
+     <!-- emotionss BAD -->
     <div class="mx-6" v-for="em2 in emotionss2" :key="em2.id">
       <div class="overflow-hidden shadow-md mb-10">
         <div class="p-6 border-gray-300 bg-yellow-200">
