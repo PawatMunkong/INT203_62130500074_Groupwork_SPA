@@ -1,7 +1,7 @@
 <template>
   <div class="Lullaby">
     <div class="text-black text-3xl justify-center stroke-current">
-      <div class="px-72 py-12 ml-96">
+      <div class="pl-80 py-12 ml-96">
         <p class="font-extrabold text-5xl">Lullaby</p>
       </div>
       <div class="px-16 ml-96">
@@ -14,9 +14,9 @@
           Choose to write green, yellow, red, write only one !
         </p>
       </div>
+      <!-- emotion GOOD -->
       <div class="pt-9 px-96 ml-24 mr-60 flex flex-col mb-3 text-xl">
         <textarea v-model="detail" rows="2" id="detail"></textarea>
-        <!-- <input v-model="name" type="text" id="name" autocomplete="off" /> -->
         <button
           class="mt-4 px-4 py-2 bg-green-500 text-white text-sm uppercase font-medium rounded hover:bg-green-400 focus:outline-none focus:bg-green-400"
           @click.prevent="submitemotion"
@@ -24,9 +24,9 @@
           GOOD
         </button>
       </div>
+        <!-- emotion GOOD -->
         <div class="pt-6 px-96 ml-24 mr-60 flex flex-col mb-3 text-xl">
         <textarea v-model="detail2" rows="2" id="detail2"></textarea>
-        <!-- <input v-model="name" type="text" id="name" autocomplete="off" /> -->
         <button
           class="mt-4 px-4 py-2 bg-yellow-600 text-white text-sm uppercase font-medium rounded hover:bg-yellow-500 focus:outline-none focus:bg-yellow-500"
           @click.prevent="submitemotion2"
@@ -34,9 +34,9 @@
           GOOD
         </button>
       </div>
+        <!-- emotion GOOD -->
         <div class="pt-6 px-96 ml-24 mr-60 flex flex-col mb-3 text-xl">
         <textarea v-model="detail2" rows="2" id="detail2"></textarea>
-        <!-- <input v-model="name" type="text" id="name" autocomplete="off" /> -->
         <button
           class="mt-4 px-4 py-2 bg-red-700 text-white text-sm uppercase font-medium rounded hover:bg-red-600 focus:outline-none focus:bg-red-600"
           @click.prevent="submitemotion3"
@@ -78,7 +78,7 @@ export default {
        
         this.detail= ''
         setTimeout(() => {
-          this.$router.push('List')
+          this.$router.push('LullaList')
         }, 250);
       }).catch((error) => {
         console.log(error)

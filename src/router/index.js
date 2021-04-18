@@ -22,9 +22,14 @@ const routes = [
   {
     path: '/list',
     name: 'LullaList',
-    component: () => import(/* webpackChunkName: "List" */'../views/Lullabylist.vue')
+    component: () => import('../views/Lullabylist.vue')
+  },
+  {
+    path: '/change/:ce',
+    name: 'Change',
+    component: () => import('../views/ChangeEmotion.vue')
   }
-  
+
 ]
 
 const router = createRouter({

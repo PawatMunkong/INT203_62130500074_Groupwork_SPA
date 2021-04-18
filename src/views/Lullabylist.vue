@@ -1,11 +1,12 @@
 <template>
   <div class="text-black text-3xl justify-center stroke-current">
+    <emotion :emotionss="emotions" @delete="deleteemotion($event)" ></emotion>
     <!-- <Emotion/> -->
     <!-- <NavBar/> -->
-    <emotion :emotionss="emotions" @delete="deleteemotion($event)" ></emotion>
   </div>
 </template>
 <script>
+
 //ผมใช้ axios ในการทำ -get-post-put-and-delete ครับ yarn add axios ref.จากเว็บที่เอามาใช้
 //https://www.npmjs.com/package/axios
 //https://www.javaguides.net/2020/08/reactjs-axios-get-post-put-and-delete-example-tutorial.html
